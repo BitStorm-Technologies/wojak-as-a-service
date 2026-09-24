@@ -73,7 +73,9 @@ class WojakClassifier:
                     else:
                         criteria[child["name"]] = self._summary(child)
                 with logfire.span("jev choice", node=node["name"],
-                                  options=len(criteria)) as step:
+                                  options=len(criteria), state=prompt,
+                                  instructions=INSTRUCTIONS,
+                                  criteria=criteria) as step:
                     resp = self.client.system_one(
                         state=prompt,
                         questions={"pick": Choice(instructions=INSTRUCTIONS,
