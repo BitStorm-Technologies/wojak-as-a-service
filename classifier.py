@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 
+import logfire
 from typesafe_sdk import Choice, TypeSafeClient
 
 ROOT = Path(__file__).parent
@@ -63,27 +64,33 @@ class WojakClassifier:
         """Return (image leaf, walk trail of (node name, confidence))."""
         node = self.tree
         trail: list[tuple[str, float]] = []
-        while "children" in node:
-            criteria = {}
-            for child in node["children"]:
-                if "path" in child:
-                    criteria[child["name"]] = child.get("description")
-                else:
-                    criteria[child["name"]] = self._summary(child)
-            resp = self.client.system_one(
-                state=prompt,
-                questions={"pick": Choice(instructions=INSTRUCTIONS,
-                                          criteria=criteria)},
-            )
-            answer = resp.answers["pick"]
-            match = next((c for c in node["children"]
-                          if c["name"] == answer.choice), None)
-            if match is None:
-                raise RuntimeError(
-                    f"jev picked unknown option {answer.choice!r} at "
-                    f"{node['name']!r}")
-            trail.append((match["name"], answer.confidence))
-            node = match
+        with logfire.span("classify wojak", prompt=prompt) as root:
+            while "children" in node:
+                criteria = {}
+                for child in node["children"]:
+                    if "path" in child:
+                        criteria[child["name"]] = child.get("description")
+                    else:
+                        criteria[child["name"]] = self._summary(child)
+                with logfire.span("jev choice", node=node["name"],
+                                  options=len(criteria)) as step:
+                    resp = self.client.system_one(
+                        state=prompt,
+                        questions={"pick": Choice(instructions=INSTRUCTIONS,
+                                                  criteria=criteria)},
+                    )
+                    answer = resp.answers["pick"]
+                    match = next((c for c in node["children"]
+                                  if c["name"] == answer.choice), None)
+                    if match is None:
+                        raise RuntimeError(
+                            f"jev picked unknown option {answer.choice!r} at "
+                            f"{node['name']!r}")
+                    step.set_attribute("choice", match["name"])
+                    step.set_attribute("confidence", answer.confidence)
+                    trail.append((match["name"], answer.confidence))
+                    node = match
+            root.set_attribute("leaf", node["name"])
         return node, trail
 
     def resolve(self, leaf: dict) -> Path:

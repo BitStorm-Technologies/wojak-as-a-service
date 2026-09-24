@@ -14,6 +14,7 @@ import logging
 import os
 import time
 
+import logfire
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
@@ -22,6 +23,7 @@ from classifier import WojakClassifier, load_env
 load_env()
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("wojak-bot")
+logfire.configure(service_name="wojak-bot")
 
 app = App(token=os.environ["SLACK_BOT_TOKEN"])
 classifier = WojakClassifier()
@@ -36,26 +38,32 @@ def handle_wojak(ack, command, client):
         return
     ack(f"finding the wojak for: _{prompt}_")
 
-    try:
-        leaf, trail = classifier.classify(prompt)
-        elapsed = time.monotonic() - t0
-        client.files_upload_v2(
-            channel=command["channel_id"],
-            file=str(classifier.resolve(leaf)),
-            title=leaf["name"],
-            initial_comment=(
-                f"*wojak'd* <@{command['user_id']}> for _{prompt}_\n"
-                f"*{leaf['name']}*: {leaf.get('description', '')}\n"
-                f"time to wojak'd: *{elapsed:.1f}s*"),
-        )
-        log.info("wojak'd %r -> %s in %.1fs via %s", prompt, leaf["path"],
-                 elapsed, " > ".join(name for name, _ in trail))
-    except Exception as e:
-        log.exception("wojak failed for %r", prompt)
-        client.chat_postEphemeral(
-            channel=command["channel_id"],
-            user=command["user_id"],
-            text=f"couldn't wojak that: {e}")
+    with logfire.span("handle /wojak", prompt=prompt,
+                      user=command["user_id"],
+                      channel=command["channel_id"]) as span:
+        try:
+            leaf, trail = classifier.classify(prompt)
+            elapsed = time.monotonic() - t0
+            client.files_upload_v2(
+                channel=command["channel_id"],
+                file=str(classifier.resolve(leaf)),
+                title=leaf["name"],
+                initial_comment=(
+                    f"*wojak'd* <@{command['user_id']}> for _{prompt}_\n"
+                    f"*{leaf['name']}*: {leaf.get('description', '')}\n"
+                    f"time to wojak'd: *{elapsed:.1f}s*"),
+            )
+            span.set_attribute("leaf", leaf["name"])
+            span.set_attribute("elapsed_s", round(elapsed, 3))
+            log.info("wojak'd %r -> %s in %.1fs via %s", prompt, leaf["path"],
+                     elapsed, " > ".join(name for name, _ in trail))
+        except Exception as e:
+            log.exception("wojak failed for %r", prompt)
+            logfire.exception("wojak failed", prompt=prompt)
+            client.chat_postEphemeral(
+                channel=command["channel_id"],
+                user=command["user_id"],
+                text=f"couldn't wojak that: {e}")
 
 
 if __name__ == "__main__":
