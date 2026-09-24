@@ -28,7 +28,13 @@ def load_env() -> None:
         line = line.strip()
         if line and not line.startswith("#") and "=" in line:
             key, _, value = line.partition("=")
-            os.environ.setdefault(key.strip(), value.strip())
+            value = value.strip()
+            # docker compose strips surrounding quotes; match that so the same
+            # .env works locally and in the container (a quoted OTLP header
+            # becomes an invalid header name and export fails with 400).
+            if len(value) >= 2 and value[0] == value[-1] and value[0] in "'\"":
+                value = value[1:-1]
+            os.environ.setdefault(key.strip(), value)
 
 
 class WojakClassifier:

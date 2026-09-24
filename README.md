@@ -27,14 +27,39 @@ in the index (`build_index.py`, incremental on re-runs).
 index is a tree (the folder taxonomy of the collection), and classification
 is a walk: one Choice question per node, an image leaf ends it. 2 to 3 API
 calls per prompt, each ~70-180 ms, which is where the KPI in every response
-comes from: `time to wojak'd`.
+comes from: `time to wojak'd`. The tree-walk design exists because of the
+255-option cap, but it has the standard hierarchical-classifier trade-off: a
+wrong category pick is unrecoverable downstream.
 
 ```mermaid
 flowchart LR
     A["/wojak prompt"] --> B["jev Choice:<br/>which category?"]
     B --> C["jev Choice:<br/>which wojak?"]
     C --> D["upload image<br/>+ time to wojak'd"]
-```
+
+## How it's classified
+
+[jev](https://en.wikipedia.org/wiki/Jev_(AI_model)) is not an LLM: it
+generates no text. Given a block of state (string or JSON) and typed
+questions, it returns structured answers with probability estimates, trained
+with RLCD (reinforcement learning for calibrated decisions), which optimizes
+probabilities against outcomes rather than human preference. In principle
+that makes its confidence scores calibrated; in practice, verify against
+your own traffic before building thresholds on them.
+
+What a 15-prompt live probe of this bot showed:
+
+- **Picks are stable, confidences are not.** The same prompt classified 5
+  times gave the same wojak all 5 times, with confidence wobbling plus or
+  minus 0.1 between calls.
+- **Most picks are soft.** Typical confidence was 0.2-0.5; jev is usually
+  choosing among near-ties, so small description changes can flip outputs.
+- **Errors happen at the root.** A wrong category pick (e.g. "waking up
+  before the alarm" routed to Chads) cannot be fixed at the leaf level.
+
+Every classification is traced to Logfire: each node question is a span
+carrying the full state, instructions, criteria, chosen option, and
+confidence, so picks are auditable after the fact.
 
 ## Run it
 
