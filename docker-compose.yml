@@ -1,0 +1,6 @@
+services:
+  wojak-bot:
+    build: .
+    container_name: wojak-bot
+    restart: unless-stopped
+    env_file: .env

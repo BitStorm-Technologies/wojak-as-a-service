@@ -1,0 +1,320 @@
+{
+  "name": "wojaks",
+  "children": [
+    {
+      "name": "brainiaks",
+      "children": [
+        {
+          "name": "brainchair",
+          "path": "brainiaks/brainchair.png",
+          "description": "A smug, intellectual-looking wojak with glasses and an enormous exposed veiny brain sits relaxed in a brain-shaped armchair, calmly smoking a pipe."
+        },
+        {
+          "name": "Brain Cube",
+          "path": "brainiaks/BrainCube.png",
+          "description": "A calm, faintly smug Wojak faces forward while his cranium opens into a transparent galaxy-filled tesseract, signifying hyperdimensional “galaxy brain” enlightenment."
+        },
+        {
+          "name": "wojak big brain universe",
+          "path": "brainiaks/wojak-big-brain-universe.png",
+          "description": "A muscular, shirtless wojak with a strained, weary expression kneels like Atlas while hoisting an enormous, veiny brain onto his shoulders, symbolizing the heavy burden of intelligence or overthinking."
+        }
+      ]
+    },
+    {
+      "name": "brainlets",
+      "children": [
+        {
+          "name": "False Brainiac",
+          "path": "brainlets/FalseBrainiac.png",
+          "description": "A crying, bald wojak in a purple shirt and blue pants exhaustedly operates a red bike pump to inflate his own grotesquely oversized, balloon-like brain towering above his head."
+        },
+        {
+          "name": "Hangin Brainlet",
+          "path": "brainlets/HanginBrainlet.png",
+          "description": "A drooling wojak with a comically oversized, hollow skull grins maniacally while fixating on a tiny object dangling from a string inside its otherwise empty head."
+        },
+        {
+          "name": "Log Brainlet",
+          "path": "brainlets/LogBrainlet.png",
+          "description": "A bald wojak character with a blank, deadpan expression wears a large wooden log with small sprouting leaves on top of his head like a hat, his mouth hanging open as if mid-sentence."
+        },
+        {
+          "name": "Microwave Brainlet",
+          "path": "brainlets/MicrowaveBrainlet.png",
+          "description": "A dazed, vacant-eyed wojak drools blue spittle while his pink brain cooks inside the microwave that serves as his head, with gray smoke billowing out from the top."
+        },
+        {
+          "name": "Wind Up Brainlet",
+          "path": "brainlets/WindUpBrainlet.png",
+          "description": "A smug, smirking wojak with half-lidded eyes has a wind-up toy key protruding from the top of its head, suggesting it is a mindless mechanical automaton."
+        }
+      ]
+    },
+    {
+      "name": "Chads",
+      "children": [
+        {
+          "name": "Boomer Chad",
+          "path": "Chads/BoomerChad.png",
+          "description": "A profile-view wojak of a bald, gray-goateed man wearing black sunglasses smirks with cool, smug confidence, dressed in a navy shirt against a transparent background."
+        },
+        {
+          "name": "Chad",
+          "path": "Chads/Chad.png",
+          "description": "A blonde, bearded \"Yes Chad\" wojak with a chiseled jawline and muscular neck gazes confidently to the side with a calm, self-assured smirk, wearing a dark shirt against a black background."
+        },
+        {
+          "name": "John Maynard Keynes",
+          "path": "Chads/John Maynard Keynes.png",
+          "description": "The \"Yes Chad\" wojak, a handsome man with a chiseled jawline, slicked-back hair, and a stylish mustache, smirks with calm, unshakable confidence as he faces forward in profile."
+        },
+        {
+          "name": "Nordic Chad Front View",
+          "path": "Chads/NordicChadFrontView.png",
+          "description": "The image depicts the \"Yes Chad\" wojak, a calm and confident blonde man with blue eyes, slicked-back hair, and a full beard, staring directly forward with a subtle, self-assured smirk."
+        }
+      ]
+    },
+    {
+      "name": "doomers",
+      "children": [
+        {
+          "name": "19 Century Doomer",
+          "path": "doomers/19CenturyDoomer.png",
+          "description": "A smug, aristocratic wojak with wavy gray hair and a high-collared coat with a cravat gazes forward with a subtle, self-satisfied smile, resembling a 19th-century gentleman or classical composer like Beethoven."
+        },
+        {
+          "name": "doomer",
+          "path": "doomers/doomer.png",
+          "description": "A melancholic, dead-eyed \"doomer\" wojak wearing a black beanie and hoodie stares blankly ahead while smoking a cigarette against a black background."
+        },
+        {
+          "name": "Doomer Gaming",
+          "path": "doomers/DoomerGaming.png",
+          "description": "A blue-tinted, gaunt and wrinkled wojak with hollow eyes stares blankly in weary melancholy while sitting and clutching a video game controller."
+        },
+        {
+          "name": "Doomer Stage6",
+          "path": "doomers/DoomerStage6.png",
+          "description": "A deranged, glitch-textured wojak with wild scribbled hair stares out with wide, bloodshot, green-irised eyes and a manic red-streaked grin, radiating chaotic, unhinged energy."
+        },
+        {
+          "name": "Wojak Pre Doom",
+          "path": "doomers/WojakPreDoom.png",
+          "description": "A haggard wojak with messy brown hair and stubble stares blankly ahead with intensely bloodshot red eyes and heavy purple bags under them, conveying utter exhaustion and sleep deprivation."
+        }
+      ]
+    },
+    {
+      "name": "mask wojaks",
+      "children": [
+        {
+          "name": "Evil Masked2",
+          "path": "mask wojaks/EvilMasked2.png",
+          "description": "A bald wojak grins with mischievous, scheming glee as he holds a mask of a calm, mild-mannered wojak face in front of himself to hide his true expression."
+        },
+        {
+          "name": "Tired Masked",
+          "path": "mask wojaks/TiredMasked.png",
+          "description": "A weary, wrinkled, dead-eyed wojak pulls off a cheerful, grinning mask of a younger face, revealing his exhausted true self hiding behind the happy facade."
+        },
+        {
+          "name": "wojak happy mask",
+          "path": "mask wojaks/wojak-happy-mask.png",
+          "description": "A somber, dead-eyed wojak holds a wide-grinning, toothy mask of a happy wojak face in front of his own, embodying the concept of hiding inner sadness behind a forced cheerful facade."
+        }
+      ]
+    },
+    {
+      "name": "more characters",
+      "children": [
+        {
+          "name": "boomers",
+          "children": [
+            {
+              "name": "Computer Boomer",
+              "path": "more characters/boomers/ComputerBoomer.png",
+              "description": "A smug, balding middle-aged wojak with a mustache, stubble, and dark sunglasses sits contentedly at his ThinkPad laptop next to a can of Monster Energy Ultra."
+            },
+            {
+              "name": "Lawn Boomer",
+              "path": "more characters/boomers/LawnBoomer.PNG",
+              "description": "A smug, contented \"boomer\" wojak with a balding head, sunglasses, shirtless torso, and an orange flame tattoo on his forearm rides a green John Deere lawnmower while holding up a Monster energy drink can, with another Monster can resting on the mower."
+            }
+          ]
+        },
+        {
+          "name": "grug",
+          "children": [
+            {
+              "name": "Chad Grug",
+              "path": "more characters/grug/ChadGrug.png",
+              "description": "A smug, self-satisfied caveman wojak with an elongated head and prominent brow smirks while carrying a large wooden club over his shoulder, wearing an orange animal-print garment."
+            }
+          ]
+        },
+        {
+          "name": "zoomers",
+          "children": [
+            {
+              "name": "Zoomer Smug",
+              "path": "more characters/zoomers/ZoomerSmug.png",
+              "description": "A wojak with a tall forehead, reddish swept-up hair, and round glasses wears a smug, self-satisfied smirk, exuding an air of condescending intellectual superiority."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NPCs",
+      "children": [
+        {
+          "name": "Computer NPC2",
+          "path": "NPCs/ComputerNPC2.png",
+          "description": "A grey NPC wojak with a blank, deadpan expression sits at a computer desk wearing pink Mickey Mouse pajamas, holding a coffee mug with a pack of cigarettes resting beside him."
+        },
+        {
+          "name": "NPC",
+          "path": "NPCs/NPC.PNG",
+          "description": "A gray-faced NPC wojak with a completely blank, emotionless expression stares vacantly forward, distinguished by his bald head, simple dot eyes, angular nose, and flat straight-line mouth."
+        },
+        {
+          "name": "Shower NPC",
+          "path": "NPCs/ShowerNPC.png",
+          "description": "A grey, blank-faced NPC wojak stands expressionless under a running shower while a thought bubble reveals he is imagining the exact same scene of himself showering."
+        },
+        {
+          "name": "Twitter Verified NPC",
+          "path": "NPCs/TwitterVerifiedNPC.png",
+          "description": "A gray NPC-style wojak with a blank, emotionless expression stares blankly ahead, distinguished by a blue Twitter verification checkmark badge stamped on its forehead."
+        }
+      ]
+    },
+    {
+      "name": "rage wojaks",
+      "children": [
+        {
+          "name": "Rage Brain2",
+          "path": "rage wojaks/RageBrain2.png",
+          "description": "A pink, brain-textured \"big brain\" wojak wearing glasses sits slumped in a matching brain-shaped throne, sobbing with tears streaming down his anguished, open-mouthed face while holding a smoking pipe."
+        },
+        {
+          "name": "Rage Camel",
+          "path": "rage wojaks/RageCamel.png",
+          "description": "A bald pink wojak screams in anguish with red tears streaming from his eyes while riding a pink camel that has a matching red nosebleed, all rendered in stark magenta and black."
+        },
+        {
+          "name": "Rage Crying",
+          "path": "rage wojaks/RageCrying.png",
+          "description": "A pink bald wojak with a furrowed, wrinkled brow cries profusely, blue tears streaming down its anguished face in an expression of intense frustration and despair."
+        },
+        {
+          "name": "Rage Red",
+          "path": "rage wojaks/RageRed.png",
+          "description": "A bald wojak whose entire face and body are solid red glares with bloodshot, veiny eyes and clenched, gritted teeth, embodying seething, barely contained rage."
+        }
+      ]
+    },
+    {
+      "name": "regular wojaks",
+      "children": [
+        {
+          "name": "Blanket Wojak",
+          "path": "regular wojaks/BlanketWojak.png",
+          "description": "A wojak character lies cozily tucked into bed with blankets pulled up to his chin, wearing a faint, contented-yet-melancholic smile as he rests his head on a pillow."
+        },
+        {
+          "name": "Clown Wojak",
+          "path": "regular wojaks/ClownWojak.png",
+          "description": "A weary, sad-looking wojak wearing full clown makeup - white face paint, red nose, red side hair tufts, and a ruffled clown collar - stares off to the side with droopy, exhausted eyes."
+        },
+        {
+          "name": "Computer Wojak",
+          "path": "regular wojaks/ComputerWojak.webp",
+          "description": "A bald, melancholic wojak with a weary, downcast expression sits at a desk staring blankly at his computer monitor, a mug resting beside the keyboard."
+        },
+        {
+          "name": "Covering Face Wojak",
+          "path": "regular wojaks/CoveringFaceWojak.png",
+          "description": "A bald wojak character expresses exasperation and embarrassment as he covers his face with his hand in a facepalm gesture."
+        },
+        {
+          "name": "Driving Wojak",
+          "path": "regular wojaks/DrivingWojak.png",
+          "description": "A bald Wojak with a weary, anxious expression sits in a car gripping the steering wheel, surrounded by pitch-black windows."
+        },
+        {
+          "name": "Fascade Wojak",
+          "path": "regular wojaks/FascadeWojak.png",
+          "description": "A bald, wrinkled wojak with squinted eyes and a strained, toothy grin appears to be forcing an awkward, pained smile."
+        },
+        {
+          "name": "Feelium Wojak",
+          "path": "regular wojaks/FeeliumWojak.png",
+          "description": "A melancholic, balding wojak sits slumped in a chair with nasal tubes hooked up to two gas canisters labeled \"FEELIUM,\" numbing himself by inhaling bottled emotions."
+        },
+        {
+          "name": "Happy Crying Wojak",
+          "path": "regular wojaks/HappyCryingWojak.png",
+          "description": "A bald wojak character forces a strained smile while blue tears stream down from both eyes, conveying sadness masked by a façade of happiness against a black background."
+        },
+        {
+          "name": "Shrugging Wojak",
+          "path": "regular wojaks/ShruggingWojak.png",
+          "description": "A bald, sad-eyed wojak with a wistful, resigned smile shrugs with both hands raised in a helpless \"what can you do\" gesture, wearing a collared shirt against a black background."
+        },
+        {
+          "name": "Wojak",
+          "path": "regular wojaks/Wojak.png",
+          "description": "A bald, crudely drawn white line-art wojak (the classic \"feels guy\") gazes wistfully into the distance with a melancholic expression and faint forced smile against a solid black background."
+        },
+        {
+          "name": "Wojak Chilling",
+          "path": "regular wojaks/WojakChilling.png",
+          "description": "A bald wojak in a chunky rust-orange sweater cradles a steaming mug with both hands, his half-lidded eyes and faint wistful smile conveying a quiet, melancholic coziness as he leans against a brown wall."
+        },
+        {
+          "name": "Wojak Group Hug",
+          "path": "regular wojaks/WojakGroupHug.png",
+          "description": "A group of bald wojak characters with melancholic, weary expressions huddle together in a tight group hug, embracing one another for comfort."
+        }
+      ]
+    },
+    {
+      "name": "soyjaks",
+      "children": [
+        {
+          "name": "Group Of Soyjaks",
+          "path": "soyjaks/GroupOfSoyjaks.png",
+          "description": "A group of bald, bearded wojak characters - some wearing glasses and one in a beret - crowd together with wide-eyed, open-mouthed expressions of manic excitement, leaning in and pointing as if ecstatically reacting to something."
+        },
+        {
+          "name": "Soyjak",
+          "path": "soyjaks/Soyjak.png",
+          "description": "A bald soyjak wojak with glasses and a scraggly beard stares wide-eyed with his mouth gaping open in an exaggerated expression of ecstatic excitement or shock."
+        },
+        {
+          "name": "Soyjak2",
+          "path": "soyjaks/Soyjak2.png",
+          "description": "A bald, glasses-wearing wojak with scruffy stubble grins wildly with wide eyes and an open mouth, embodying overexcited, enthusiastic anticipation (the classic \"soyjak\" expression)."
+        },
+        {
+          "name": "Soyjak Crying",
+          "path": "soyjaks/SoyjakCrying.png",
+          "description": "A bald, glasses-wearing wojak with a wide-open screaming mouth and tears streaming down his face points in anguish at a chart showing a line that peaks and then crashes, with \"YOU ARE HERE!\" circled right at the top."
+        },
+        {
+          "name": "Soyjak Guzzling",
+          "path": "soyjaks/SoyjakGuzzling.png",
+          "description": "A gleeful soyjak wojak with glasses and a beard gapes his mouth wide open as a stream of Silk soy milk pours from a floating carton directly into his eagerly awaiting mouth."
+        },
+        {
+          "name": "Soyjak Pointing",
+          "path": "soyjaks/SoyjakPointing.png",
+          "description": "An excited balding soyjak with glasses and a scraggly beard grins open-mouthed while pointing with both index fingers."
+        }
+      ]
+    }
+  ]
+}

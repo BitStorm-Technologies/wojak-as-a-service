@@ -1,0 +1,27 @@
+{
+  "_metadata": { "major_version": 1, "minor_version": 1 },
+  "display_information": {
+    "name": "Wojak Bot",
+    "description": "Wojak-as-a-service: give /wojak a prompt, get the most applicable wojak."
+  },
+  "features": {
+    "bot_user": { "display_name": "Wojak Bot" },
+    "slash_commands": [
+      {
+        "command": "/wojak",
+        "description": "Get the most applicable wojak for a prompt",
+        "usage_hint": "<situation or message>",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["commands", "chat:write", "files:write"]
+    }
+  },
+  "settings": {
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}

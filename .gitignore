@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# full library stays out of the repo; the committed index is the SFW 50.
+# Sample images and original_forward.txt are force-added past this.
+wojack_source_images/
+wojak_index.full.json
